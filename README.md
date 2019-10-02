@@ -11,13 +11,15 @@ This is an Angular 8 BoilerPlate app that includes -
 6. Common Shared Module that handles components, directives, guards, 3rd party modules, etc. to be used by all feature modules
 7. Feature Shared Module for Home Module that includes common features to be used only by Home Module
 
-## Installatation Instructions
+## Installation Instructions
 
 Open base folder with the name angular-8-boiler-plate in command prompt or terminal and then run `npm i` to install all the dependencies.
 
 ## Run Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. The app will automatically reload if you change any of the source files.
+Navigate to `http://localhost:4200/`.
+Use any (non-empty) username and password to login.
 
 ## Code scaffolding
 
