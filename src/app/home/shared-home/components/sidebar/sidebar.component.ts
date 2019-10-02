@@ -32,4 +32,9 @@ export class SidebarComponent implements OnInit {
     this.showReports = !this.showReports;
   }
 
+  public goToEarthEngine(): void {
+    this.showReports = false;
+    this.router.navigate(['home/ee']);
+  }
+
 }

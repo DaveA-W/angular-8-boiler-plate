@@ -18,6 +18,10 @@ const homeRoutes: Routes = [
         path: 'reports',
         loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule)
       },
+      {
+        path: 'ee',
+        loadChildren: () => import('./earth-engine/earth-engine.module').then(m => m.EarthEngineModule)
+      },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }

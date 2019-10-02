@@ -4,7 +4,7 @@
         <i class="fa fa-cog" tooltip="Dashboard" placement="right"></i>
         <div *ngIf="isOpen">Dashboard</div>
       </div>
-  
+
       <div class="nav-item" (click)="activateReports()">
         <i class="fa fa-user" tooltip="Reports" placement="right"></i>
         <div class="row" *ngIf="isOpen">
@@ -20,6 +20,11 @@
           <i class="fa fa-info-circle" tooltip="Report 2" placement="right"></i>
           <div *ngIf="isOpen">Report Two</div>
         </div>
+      </div>
+
+      <div class="nav-item" (click)="goToEarthEngine()">
+        <i class="fa fa-cog" tooltip="Earth Engine" placement="right"></i>
+        <div *ngIf="isOpen">Earth Engine</div>
       </div>
     </nav>
   </div>
