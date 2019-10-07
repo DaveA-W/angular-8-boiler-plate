@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run minify-ee && ng build",
+    "build-release": "npm run minify-ee && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build -c production --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "minify-ee": "uglifyjs ./node_modules/@google/earthengine/build/ee_api_js_debug.js --compress -o ./node_modules/@google/earthengine/build/ee_api_js_debug.min.js"
   },
   "private": true,
   "dependencies": {
@@ -19,9 +21,9 @@
     "@angular/platform-browser": "~8.2.2",
     "@angular/platform-browser-dynamic": "~8.2.2",
     "@angular/router": "~8.2.2",
-    "@google/earthengine": "^0.1.202",
     "bootstrap": "^4.2.1",
     "core-js": "^3.2.1",
+    "ng-gapi": "0.0.73",
     "ngx-bootstrap": "^5.1.1",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
@@ -33,6 +35,7 @@
     "@angular/compiler-cli": "~8.2.2",
     "@angular/language-service": "~8.2.2",
     "@fortawesome/fontawesome-free": "^5.6.3",
+    "@google/earthengine": "^0.1.202",
     "@types/jasmine": "~3.4.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~12.7.2",
@@ -44,6 +47,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "ngx-build-plus": "^8.1.4",
     "protractor": "~5.4.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
