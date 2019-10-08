@@ -1,5 +1,9 @@
-<h1>EE Test</h1>
-
-<button type="button" (click)="onInitializeClick()">Initialize</button>
-
-<p>{{message$ | async}}</p>
+<div style="margin-left:5rem">
+  <h1>EE Test</h1>
+  <p>
+    <button type="button" (click)="onLoginClick()" [disabled]="!!token">Login</button>
+    &nbsp;
+    <button type="button" (click)="onInitializeClick()" [disabled]="!token">Initialize EE</button>
+  </p>
+  <p>{{message$ | async}}</p>
+</div>
